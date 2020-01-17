@@ -22,8 +22,8 @@ conn.on('connect', (connect => {
   conn.setEncoding('utf8'); 
 
 
-  conn.on('error', (err) => {
-    console.log(err);
+  conn.on('data', (data) => {
+    console.log(data);
   });
 
 
