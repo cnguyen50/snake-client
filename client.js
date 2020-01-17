@@ -14,6 +14,10 @@ conn.on('connect', (connect) => {
     conn.write("Name:CNN");
 });
 
+conn.on('connect', (connect => {
+    //conn.write("Move: up");
+}))
+
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
@@ -21,6 +25,8 @@ conn.on('connect', (connect) => {
   conn.on('error', (err) => {
     console.log(err);
   });
+
+
 
 
   return conn;
