@@ -10,14 +10,21 @@ const connect = function() {
   conn.setEncoding('utf8'); 
   
   conn.on('connect', () => {
-    console.log("Successfully connected to game server")
-    conn.write("Name: YUR");
-  })
+    console.log("Successfully connected to game server");
 
+    // setTimeout(() => {
+    //   conn.write("Name: YUR");
+    // }, 50);
+
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 50);
+
+  });
 
   conn.on('data', (data) => {
       console.log("Server says:", data)
-  })
+  });
 
   return conn;
 }
