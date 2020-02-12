@@ -11,7 +11,7 @@ const connect = function() {
   
   conn.on('connect', () => {
     console.log("Successfully connected to game server");
-
+    conn.write("Name: YUR");
     // setTimeout(() => {
     //   conn.write("Name: YUR");
     // }, 50);
@@ -22,12 +22,15 @@ const connect = function() {
 
   });
 
+
+
   conn.on('data', (data) => {
       console.log("Server says:", data)
   });
 
   return conn;
 }
+
 
 // console.log('Connecting ...');
 // connect();
